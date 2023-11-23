@@ -1,0 +1,17 @@
+1. khi lựa chọn "cancel" thì kết quả trả về sẽ là "You've chosen: No"
+2. để thay thể lựa chọn thành "I do" và "I don't" có thể sử dụng đoạn mã sau để thay thế:
+    
+/*        int option = JOptionPane.showOptionDialog(
+            null,
+            "Do you want to change the first class ticket?",
+            "Confirmation",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+            null,
+            new Object[]{"I do", "I don't"},
+            "I do" 
+        );
+        
+        String choice = (option == JOptionPane.YES_OPTION) ? "I do" : "I don't";
+        JOptionPane.showMessageDialog(null, "You've chosen: " + choice);
+*/        
