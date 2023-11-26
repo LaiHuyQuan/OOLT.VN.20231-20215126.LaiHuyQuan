@@ -1,35 +1,97 @@
 package hust.soict.hedspi.aims.store;
-import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.media.Media;
 
 import java.util.ArrayList;
+import java.util.List;
+
 public class Store {
 
-    public ArrayList<DigitalVideoDisc> itemInStore = new ArrayList<>();
+    public static List<Media> itemInStore = new ArrayList<>();
 
-    public void addDVD(DigitalVideoDisc disc){
-        if (itemInStore.contains(disc)){
-            System.out.println("DVD available in store");
+    public static void addMedia(Media media){
+        if (itemInStore.contains(media)){
+            System.out.println("Media available in store");
         }
         else{
-            itemInStore.add(disc);
+            itemInStore.add(media);
         }
     }
 
-    public void removeDVD(DigitalVideoDisc disc){
-        if(itemInStore.contains(disc)){
-            itemInStore.remove(disc);
-            System.out.println("DVD has been removed");
+    public static void removeMedia(Media media){
+        if(itemInStore.contains(media)){
+            itemInStore.remove(media);
+            System.out.println("Media has been removed");
         }
         else{
-            System.out.println("DVD does not exist");
+            System.out.println("Media does not exist");
         }
     }
 
-    @Override
-    public boolean equals(DigitalVideoDisc disc) {
-        if (disc.getId() == other.) {
-            return true;
+    public static boolean SearchByID(int id){
+        boolean i = false;
+        for (Media media : itemInStore){
+            if(media.getId() == id){
+                System.out.println(media.toString());
+                i = true;
+            }
         }
-
+        if (!i){
+            System.out.println("no matching");
+        }
+        return i;
     }
+
+    public static void SearchByTitle(String title){
+        boolean i = false;
+        for (Media media : itemInStore){
+            if(media.getTitle().equals(title)){
+                System.out.println(media.toString());
+                i = true;
+            }
+        }
+        if (!i){
+            System.out.println("no matching");
+        }
+    }
+
+    public static void AddToStore(String title){
+        boolean i =false;
+        for (Media media : itemInStore){
+            if(!media.getTitle().equals(title)){
+                Store.addMedia(media);
+                System.out.println("Added media to store.");
+                i = true;
+            }
+        }
+        if (!i){
+            System.out.println("Media is already in store.");
+        }
+    }
+
+    public static void RemoveFromStore(String title){
+        boolean i =false;
+        for (Media media : itemInStore){
+            if(media.getTitle().equals(title)){
+                Store.removeMedia(media);
+                System.out.println("Removed media form store.");
+                i = true;
+            }
+        }
+        if (!i){
+            System.out.println("no matching");
+        }
+    }
+    public static void PlayMedia(String title){
+        boolean i =false;
+        for (Media media : itemInStore){
+            if(media.getTitle().equals(title)){
+                PlayMedia(String.valueOf(media));
+                i = true;
+            }
+        }
+        if (!i){
+            System.out.println("no matching");
+        }
+    }
+
 }
