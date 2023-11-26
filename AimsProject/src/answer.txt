@@ -1,8 +1,0 @@
-1. Phương thức getter và setter có thể bị coi là tệ là do sự liên kết quá chặt chẽ và khiến code đôi khi trở nên dài dòng và phức tạp. Điều này dẫn đến khó khăn trong việc bảo trì và update code.
-2. Q: If you create a constructor method to build a DVD by title then create a constructor method to build
-a DVD by category. Does JAVA allow you to do this?
-   A: Trong java có thể tạo 2 hay nhiều phương thức với các tham số và kiểu dữ liệu truyền vào khác nhau. Tương tự thì hoàn toàn có thể tạo ra 2 constructor để khởi tạo DVD bằng title và category. Tuy nhiên trong hệ thống AIMS, đây có thể coi là 2 thông số quan trọng của DVD, do đó không nên khởi tạo DVD mà thiếu đi 1 trong 2 thông số này.
-3. Q: Is JAVA a Pass by Value or a Pass by Reference programming language?
-   A: JAVA là ngôn ngữ Pass by Value.
-4: swap(jungleDVD, cinderellaDVD) không hoán đổi title vì khi này ta đang truyền một bản sao của tham chiếu đến các đối tượng, chứ không phải là các đối tượng thực sự. Vì thế việc hoán đổi trong phương thức swap này không ảnh hưởng đến các đối tượng gốc.
-- changeTitle(jungleDVD, cinderellaDVD.getTitle()) có thể thay đổi title của JungleDVD dù ở đây vẫn là truyền tham trị do giá trị của jungleDVD được sao chép qua nhưng bây giờ giá trị của đối tượng chính là địa chỉ đến các thành phần của đối tượng đó nên việc thay đổi này sẽ làm thay đổi cả title của jungleDVD ở ngoài phương thức.
