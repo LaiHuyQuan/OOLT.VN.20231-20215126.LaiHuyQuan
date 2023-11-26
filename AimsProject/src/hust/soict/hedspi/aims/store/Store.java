@@ -85,7 +85,7 @@ public class Store {
         boolean i =false;
         for (Media media : itemInStore){
             if(media.getTitle().equals(title)){
-                PlayMedia(String.valueOf(media));
+                System.out.println("Playing " + title);
                 i = true;
             }
         }

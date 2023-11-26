@@ -50,14 +50,6 @@ public class Cart {
             System.out.println("Can not remove media(not match).");
         }
     }
-    public void showCart(Cart cart){
-        int i = 1;
-        for (Media media : itemOrdered){
-            System.out.println(i + " " + media.getTitle() + " " + media.getCost());
-            i ++;
-        }
-        System.out.println("Total cost : " + cart.totalCost());
-    }
 
     public static float totalCost(){
         float total = 0;
@@ -144,7 +136,7 @@ public class Cart {
         boolean i =false;
         for (Media media : itemOrdered){
             if(media.getTitle().equals(title)){
-                PlayMedia(String.valueOf(media));
+                System.out.println("Playing " + title);;
                 i = true;
             }
         }
