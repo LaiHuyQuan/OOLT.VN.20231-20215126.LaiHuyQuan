@@ -1,0 +1,14 @@
+-lớp media triển khai giao diện comparable.
+-so sánh theo giá tiền và so sánh theo tiêu đề.
+-có thể sử dụng 2 quy tắc để lần lượt sắp xếp:
++theo giá rồi theo tiêu đề(nếu giá bằng nhau).
+-quy tắc sắp xếp theo tiêu đề rồi theo giá:
+-->sửa lại code:
+public class MediaComparatorByTitle implements Comparator<Media> {
+    public int compare(Media media1, Media media2){
+        int titleComparison = media1.getTitle().compareTo(media2.getTitle());
+        if (titleComparison == 0)
+            return Float.compare(media2.getCost(), media1.getCost());
+        return titleComparison;
+    }
+}
