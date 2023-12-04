@@ -94,4 +94,7 @@ public class Store {
         }
     }
 
+    public List<Media> getItemsInStore() {
+
+    }
 }

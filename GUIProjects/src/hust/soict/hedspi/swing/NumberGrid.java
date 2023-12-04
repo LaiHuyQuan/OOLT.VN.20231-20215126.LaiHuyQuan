@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class NumberGrid extends JFrame {
     private JButton[] btnNumbers = new JButton[10];
     private JButton btnDelete, btnReset;
-    private JTextField tfDisplay;
+    private JTextField tfDisplay; 
 
     public NumberGrid() {
         tfDisplay = new JTextField();
