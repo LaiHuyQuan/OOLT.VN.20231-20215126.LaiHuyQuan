@@ -11,6 +11,15 @@ public class CompactDisc extends Disc {
 
 
 //  Constructor
+    public CompactDisc(int id, String title, String category, float cost, String director, ArrayList<Track> tracks) {
+        super(id, title, category, cost, director);
+        if(tracks!=null){
+            this.tracks = new ArrayList<>(tracks);
+        }else {
+            this.tracks = new ArrayList<>();
+        }
+    }
+
     public CompactDisc(String title, String category, float cost, float length, int id) {
         super(title, category, cost, length, id);
     }

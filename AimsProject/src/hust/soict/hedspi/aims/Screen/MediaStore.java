@@ -1,4 +1,4 @@
-package hust.soict.hedspi.aims.Display;
+package hust.soict.hedspi.aims.Screen;
 
 
 import hust.soict.hedspi.aims.media.Media;
@@ -13,9 +13,11 @@ public class MediaStore extends JPanel {
     public MediaStore(Media media) {
         this.media = media;
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
         JLabel title = new JLabel(media.getTitle());
         title.setFont(new Font(title.getFont().getName(), Font.PLAIN, 15));
         title.setAlignmentX(CENTER_ALIGNMENT);
+
         JLabel cost = new JLabel(" " + media.getCost() + " $");
         cost.setAlignmentX(CENTER_ALIGNMENT);
         JPanel container = new JPanel();
