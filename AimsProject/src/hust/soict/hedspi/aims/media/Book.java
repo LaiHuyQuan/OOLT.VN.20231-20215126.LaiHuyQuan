@@ -6,6 +6,9 @@ public class Book extends Media {
     public ArrayList<String> authorList = new ArrayList<>();
 
 //    Constructor
+    public Book(int id, String title, String category, float cost) {
+        super(id, title, category, cost);
+    }
     public Book(String title, String category, float cost) {
         super(title, category, cost);
     }

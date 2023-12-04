@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Store {
 
-    public static List<Media> itemInStore = new ArrayList<>();
+    public static ArrayList<Media> itemInStore = new ArrayList<>();
 
     public static void addMedia(Media media){
         if (itemInStore.contains(media)){
@@ -93,8 +93,7 @@ public class Store {
             System.out.println("no matching");
         }
     }
-
-    public List<Media> getItemsInStore() {
-
+    public ArrayList<Media> getItemsInStore() {
+        return itemInStore;
     }
 }

@@ -16,6 +16,17 @@ public abstract class Disc extends Media implements Playable {
         return length;
     }
 //  Constructor
+    public Disc(int id, String title, String category, String director, int length, float cost) {
+        super(id, title, category, cost);
+        this.director = director;
+        this.length = length;
+    }
+
+    public Disc(int id, String title, String category, float cost, String director) {
+        super(id, title, category, cost);
+        this.director = director;
+    }
+
     public Disc(String title, String category, String director, float cost) {
         super(title, category, cost);
         this.director = director;
