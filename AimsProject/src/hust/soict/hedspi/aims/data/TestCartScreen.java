@@ -21,11 +21,10 @@ public class TestCartScreen extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        final String STORE_FXML_FILE_PATH = "../../../../aims/Screen/customers/view/Cart.fxml";
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(STORE_FXML_FILE_PATH));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/hedspi/aims/Screen/customers/view/Cart.fxml"));
         CartController cartController = new CartController(cart);
-        fxmlLoader.setController(cartController);
-        Parent root = fxmlLoader.load();
+        loader.setController(cartController);
+        Parent root = loader.load();
         primaryStage.setTitle("Store");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
@@ -33,7 +32,6 @@ public class TestCartScreen extends Application {
 
     public static void main(String[] args) {
         cart = new Cart();
-        Store store = new Store();
 
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("Aladin","Animation", "George Lucas", 87, 19.95f);
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("dvd2", "Science Fiction", "George Lucas", 87, 24.95f);
@@ -44,15 +42,6 @@ public class TestCartScreen extends Application {
 
         Book book1 = new Book("book1", "truyen",12f);
         Book book2 = new Book("Giai tich 2", "khong biet", 120f);
-
-        store.addMedia(dvd1);
-        store.addMedia(dvd2);
-        store.addMedia(dvd3);
-
-        store.addMedia(cd1);
-        store.addMedia(cd2);
-        store.addMedia(book1);
-        store.addMedia(book2);
 
         cart.addMedia(dvd1);
         cart.addMedia(dvd2);

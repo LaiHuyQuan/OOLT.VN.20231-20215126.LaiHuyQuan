@@ -23,7 +23,7 @@ public class TestViewStoreScreen extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        final String STORE_FXML_FILE_PATH = "../aims/Screen/customers/view/Store.fxml";
+        final String STORE_FXML_FILE_PATH = "/hust/soict/hedspi/aims/Screen/customers/view/Store.fxml";
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(STORE_FXML_FILE_PATH));
         ViewStoreController viewStoreController = new ViewStoreController(store);
         fxmlLoader.setController(viewStoreController);
