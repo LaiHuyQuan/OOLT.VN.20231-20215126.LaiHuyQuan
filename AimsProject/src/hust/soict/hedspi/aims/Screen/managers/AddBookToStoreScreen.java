@@ -1,4 +1,4 @@
-package hust.soict.hedspi.aims.Screen;
+package hust.soict.hedspi.aims.Screen.managers;
 
 import hust.soict.hedspi.aims.media.Book;
 import hust.soict.hedspi.aims.store.Store;

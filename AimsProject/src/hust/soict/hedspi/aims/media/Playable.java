@@ -4,4 +4,5 @@ public interface Playable {
     default void Play(){
         System.out.println("Playing...");
     }
+
 }
