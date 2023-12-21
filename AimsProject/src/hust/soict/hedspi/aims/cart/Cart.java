@@ -1,5 +1,7 @@
 package hust.soict.hedspi.aims.cart;
 import hust.soict.hedspi.aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +13,14 @@ public class Cart {
     private static final int MAX_NUMBERS_ORDERED = 20;
     private static List<Media> itemOrdered = new ArrayList<>();
 
+    private final ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 
+//    getter
+    public ObservableList<Media> getItemsOrdered() {
+        return this.itemsOrdered;
+    }
+
+//    method
     public static void addMedia(Media media){
         if (itemOrdered.size() >= MAX_NUMBERS_ORDERED){
             System.out.println("The cart is almost full");
@@ -132,6 +141,19 @@ public class Cart {
         itemOrdered.sort(Media.COMPARE_BY_COST);
     }
 
+    public void emptyCart() {
+        itemsOrdered.clear();
+    }
+
+    public void placeOrder(Cart cart) {
+        if (cart.getItemsOrdered().isEmpty()) {
+            System.out.println("The cart is empty. Cannot place order.");
+        } else {
+            System.out.println("Order placed successfully.");
+            cart.emptyCart();
+        }
+    }
+
     public static void PlayMedia(String title){
         boolean i =false;
         for (Media media : itemOrdered){
@@ -144,4 +166,5 @@ public class Cart {
             System.out.println("no matching");
         }
     }
+
 }

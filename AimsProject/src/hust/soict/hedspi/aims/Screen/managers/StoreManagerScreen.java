@@ -1,4 +1,4 @@
-package hust.soict.hedspi.aims.Screen;
+package hust.soict.hedspi.aims.Screen.managers;
 
 import hust.soict.hedspi.aims.cart.Cart;
 import hust.soict.hedspi.aims.media.Book;
@@ -10,7 +10,6 @@ import hust.soict.hedspi.aims.store.Store;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
